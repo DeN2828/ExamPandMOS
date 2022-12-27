@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="olxParsFin.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Entry
+                x:Name="textField"
+                Placeholder="Enter you request"
+
+
+
+
+
+                />
+           <AbsoluteLayout>
+
+
+               <Entry
+                   AbsoluteLayout.LayoutBounds="400,10,200,40"
+                   Placeholder="Цена от"
+                   x:Name="priceFrom"
+                   Keyboard="Numeric"
+                   TextChanged="priceFrom_TextChanged"
+               /> 
+                  <Entry
+                   AbsoluteLayout.LayoutBounds="650,10,200,40"
+                   Placeholder="Цена до"
+                   x:Name="priceTo"
+                   Keyboard="Numeric"
+                   TextChanged="priceTo_TextChanged"
+
+               /> 
+             
+
+           </AbsoluteLayout>
+          <Picker
+                WidthRequest="300"
+                x:Name="filtr"
+                >
+            <Picker.Items>
+                <x:String>Самые дешевые</x:String>
+                <x:String>Самые дорогие</x:String>
+                <x:String>Самые новые</x:String>
+                <x:String>Рекомендуем вам </x:String>
+
+            </Picker.Items>
+
+
+
+
+            </Picker>
+            <Button
+                x:Name="CounterBtn"
+                Text="Seacrh"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+            <Label
+                x:Name="field"
+                WidthRequest="3000"
+                HeightRequest="4000"
+                Text=""
+                />
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
